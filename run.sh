@@ -5,7 +5,7 @@
 #   - Debian / Ubuntu            (apt)
 #   - RHEL family incl. Oracle Linux, Rocky, Alma, CentOS, Fedora (dnf/yum)
 #
-# Adapted from https://github.com/LawrenceHe/fast-setup/blob/main/run.sh
+# Adapted from https://github.com/lawrencehe/fast-setup/blob/main/run.sh
 set -Eeuo pipefail
 
 MAVEN_VERSION="3.9.9"
@@ -203,18 +203,18 @@ setup_repos() {
 # ---------------------------------------------------------------------------
 case "$PM" in
   apt)
-    REQUIRED_PKGS=(ca-certificates curl tar gzip gnupg jq ncurses-bin)
+    REQUIRED_PKGS=(ca-certificates curl tar gzip gnupg jq ncurses-bin libatomic1)
     OPTIONAL_PKGS=(wget unzip zip xz-utils rsync lsof build-essential git tmux mosh \
       postgresql-client neovim btop)
     ;;
   dnf)
-    REQUIRED_PKGS=(ca-certificates curl tar gzip gnupg2 jq ncurses)
+    REQUIRED_PKGS=(ca-certificates curl tar gzip gnupg2 jq ncurses libatomic)
     OPTIONAL_PKGS=(wget unzip zip xz rsync lsof gcc gcc-c++ make git tmux mosh \
       postgresql neovim btop)
     ;;
   yum)
     # EL7: no btop
-    REQUIRED_PKGS=(ca-certificates curl tar gzip gnupg2 jq ncurses)
+    REQUIRED_PKGS=(ca-certificates curl tar gzip gnupg2 jq ncurses libatomic)
     OPTIONAL_PKGS=(wget unzip zip xz rsync lsof gcc gcc-c++ make git tmux mosh \
       postgresql neovim)
     ;;

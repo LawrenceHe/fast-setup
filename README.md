@@ -6,13 +6,13 @@ One-command development environment setup for Linux VPS. It works on both
 ## Quick start
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/LawrenceHe/fast-setup/main/run.sh | bash
+curl -fsSL https://raw.githubusercontent.com/lawrencehe/fast-setup/main/run.sh | bash
 ```
 
 Or clone and run locally:
 
 ```bash
-git clone https://github.com/LawrenceHe/fast-setup.git
+git clone https://github.com/lawrencehe/fast-setup.git
 cd fast-setup
 ./run.sh
 ```
